@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dont be Nervous</title>
+  <style>
+    body {
+        background-color: #04244d;
+        color: #eb23c6;
+        font-family:'Montserrat', Arial, sans-serif;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    label, input, textarea {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    textarea {
+      height: 200px;
+    }
+    
+    button {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Share your creativity</h1>
+  
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
